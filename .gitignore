@@ -129,3 +129,10 @@ dmypy.json
 .pyre/
 
 .idea/
+
+
+# large files
+news/news_v2/news_v2.csv
+stock_price/stock_price_v2/first_run/stock_price_2023_03_17.csv
+stock_price/stock_price_v2/stock_price_v2.csv
+news_stock_price.csv
