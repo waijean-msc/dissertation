@@ -23,9 +23,9 @@ def split(list_a, chunk_size):
 
 
 if __name__ == '__main__':
-    API_URL = "https://api-inference.huggingface.co/models/ProsusAI/finbert"
-    # API_URL = "https://api-inference.huggingface.co/models/yiyanghkust/finbert-tone"
-    model_name = "finbert_v1"
+    # API_URL = "https://api-inference.huggingface.co/models/ProsusAI/finbert"
+    API_URL = "https://api-inference.huggingface.co/models/yiyanghkust/finbert-tone"
+    model_name = "finbert_v2"
 
     df = pd.read_csv("../news/news_v2/analysis/news_v2.1.csv")
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
     p_list = []
     for i, l in enumerate(chunk_summary_title_list):
         # skip the first n if it has been processed
-        if i < 379:
+        if i < 725:
             continue
         print(f"Processing {i}/{len(chunk_summary_title_list)}")
         print(f"Number of sentences per chunk list: {len(l)}")
