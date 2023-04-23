@@ -30,22 +30,22 @@ if __name__ == '__main__':
     df = pd.read_csv("../news/news_v2/analysis/news_v2.1.csv")
 
     # convert to list
-    summary_title_list = df["model_input"].to_list()
+    model_input_list = df["model_input"].to_list()
     # check all string instances
-    all([isinstance(sent, str) for sent in summary_title_list])
+    all([isinstance(sent, str) for sent in model_input_list])
 
     # chunk into smaller size
     chunk_size = 100
-    chunk_summary_title_list = list(split(summary_title_list, chunk_size))
+    chunk_model_input_list = list(split(model_input_list, chunk_size))
     # check chunked list is equivalent to original list
-    assert len(summary_title_list) == sum([len(l) for l in chunk_summary_title_list])
+    assert len(model_input_list) == sum([len(l) for l in chunk_model_input_list])
 
     p_list = []
-    for i, l in enumerate(chunk_summary_title_list):
+    for i, l in enumerate(chunk_model_input_list):
         # skip the first n if it has been processed
         if i < 725:
             continue
-        print(f"Processing {i}/{len(chunk_summary_title_list)}")
+        print(f"Processing {i}/{len(chunk_model_input_list)}")
         print(f"Number of sentences per chunk list: {len(l)}")
         # truncate maximum number of characters for the model (512)
         max_char = 512
