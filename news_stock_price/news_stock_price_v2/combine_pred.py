@@ -18,10 +18,10 @@ def parse_result(series):
 if __name__ == '__main__':
     df = pd.read_csv("../../news/news_v2/analysis/news_v2.1.csv")
 
-    lexicon_df = pd.read_csv("lexicon/lexicon_v2.csv")
+    lexicon_df = pd.read_csv("../../lexicon/lexicon_v2.csv")
 
-    finbertv1_df = pd.read_csv("model/second_run/finbertv1.csv")
-    finbertv2_df = pd.read_csv("model/second_run/finbertv2.csv")
+    finbertv1_df = pd.read_csv("../../model/second_run/finbertv1.csv")
+    finbertv2_df = pd.read_csv("../../model/second_run/finbertv2.csv")
 
     finbertv1_processed_df = finbertv1_df.apply(parse_result, axis=1)
     finbertv2_processed_df = finbertv2_df.apply(parse_result, axis=1)
@@ -31,7 +31,5 @@ if __name__ == '__main__':
     finbertv2_processed_df.columns = ["finbertv2_" + col for col in finbertv2_processed_df.columns]
 
     combined_df = pd.concat([df, lexicon_df, finbertv1_processed_df, finbertv2_processed_df], axis=1)
-
-    combined_df["pct_return"] = combined_df["pct_return"] * 100
 
     combined_df.to_csv("news_v2.1_pred.csv", index=False)

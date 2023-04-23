@@ -10,7 +10,7 @@ if __name__ == '__main__':
 
     all_v1_df = pd.concat([df1, df2, df3, df4, df5])
     assert len(all_v1_df) == 88167
-    all_v1_df.to_csv("finbert_v1.csv", index=False)
+    all_v1_df.to_csv("finbertv1.csv", index=False)
 
     # combine v2
     df1 = pd.read_csv("finbert_v2_part1_14100.csv")
@@ -20,4 +20,4 @@ if __name__ == '__main__':
 
     all_v2_df = pd.concat([df1, df2, df3, df4])
     assert len(all_v2_df) == 88167
-    all_v2_df.to_csv("finbert_v2.csv", index=False)
+    all_v2_df.to_csv("finbertv2.csv", index=False)
