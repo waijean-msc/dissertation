@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 .idea/
-
+.doc
 
 # large files
 news/news_v2/news_v2.csv
