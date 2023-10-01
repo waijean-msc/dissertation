@@ -1,5 +1,5 @@
-# dissertation
-Comparison of Lexicon-Based and Model-Based Sentiment Analysis Techniques to Predict Stock Market
+## Title
+Sentiment Analysis in Finance: A Comparative Study of Lexicon-Based and Model-Based Methods
 
 ## Set up
 
@@ -14,12 +14,13 @@ To add kernel to Jupyter, run
 conda activate dissertation
 python -m ipykernel install --user --name dissertation
 ```
+
 ## Structure
-Given that Engage has a limit of 20 files, I have uploaded only the core sections into Engage.
+Given that Engage has an upload limit of 20 files, I have uploaded only the core sections into Engage.
 The full code base is available at https://github.com/waijean-msc/dissertation.
 
 Note that certain data files are too large (exceeded the maximum file size of 50MB in Engage) 
-hence they are not uploaded. Please reach out to me if you require the original data files.
+hence they are not uploaded tp Engage. Please reach out to me if you require the original data files.
 
 - analysis: 
   - combine_pred: combine the prediction of lexicon and model-based methods into a single file
