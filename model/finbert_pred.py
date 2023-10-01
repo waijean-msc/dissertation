@@ -27,7 +27,7 @@ if __name__ == '__main__':
     API_URL = "https://api-inference.huggingface.co/models/yiyanghkust/finbert-tone"
     model_name = "finbert_v2"
 
-    df = pd.read_csv("../news/news_v2/analysis/news_v2.1.csv")
+    df = pd.read_csv("../../news/news_v2/filter/news_v2_filter.csv")
 
     # convert to list
     model_input_list = df["model_input"].to_list()

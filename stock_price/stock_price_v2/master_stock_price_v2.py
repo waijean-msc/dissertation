@@ -28,7 +28,7 @@ def load_error(date_file_dir, error_files):
 
 
 if __name__ == '__main__':
-    date_file_dir = "./second_run/"
+    date_file_dir = "data/"
     files = listdir(date_file_dir)
 
     error_files = [f for f in files if 'error' in f]

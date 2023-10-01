@@ -133,8 +133,7 @@ dmypy.json
 
 # large files
 news/news_v2/news_v2.csv
-news/news_v2/analysis/news_v2.1.csv
-stock_price/stock_price_v2/first_run/stock_price_2023_03_17.csv
+news/news_v2/filter/news_v2_filter.csv
 stock_price/stock_price_v2/stock_price_v2.csv
-news_stock_price/news_stock_price_v1/news_stock_price.csv
-news_stock_price/news_stock_price_v2/news_v2.1_pred.csv
+analysis/holding_period/holding_period.csv
+analysis/combine_pred/combine_pred.csv
